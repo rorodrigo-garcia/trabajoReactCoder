@@ -1,0 +1,38 @@
+.navbar{
+  width: 100%;
+ background-image: linear-gradient(rgba(82, 82, 189, 0.808),white);
+}
+
+.contenedorNavbar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+}
+
+.titulo{
+    margin: 15px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.lista{
+    list-style: none;
+    margin: 15px;
+    display: flex;
+    padding: 10px;
+}
+
+.listado{
+    margin: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.listado:hover{
+    border: 2px solid rgba(182, 43, 43, 0.411);
+    border-radius: 5px;
+    color: rgba(65, 65, 189, 0.781);
+}
