@@ -10,11 +10,11 @@
     align-items: center;
     height: auto;
 }
-
-.titulo{
+ion-icon{
+    font-size: 40px;
     margin: 15px;
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
+    padding: 5px;
+    color: rgba(9, 9, 189, 0.863);
 }
 
 .lista{
