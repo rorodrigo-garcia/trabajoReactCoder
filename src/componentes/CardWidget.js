@@ -8,7 +8,7 @@ const CardWidget = () =>{
     return( 
    <div>   
 <button type="button" className="btnCarrito btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Carrito
+<ion-icon name="bag-handle-outline"></ion-icon>
 </button>
 
 
