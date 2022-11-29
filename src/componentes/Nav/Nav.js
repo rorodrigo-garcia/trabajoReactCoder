@@ -1,5 +1,5 @@
-import '../componentes/StyleNav.css'
-import CardWidget from '../componentes/CardWidget.js';
+import '../Nav/StyleNav.css'
+import CardWidget from '../CardWidget/CardWidget.js';
 
 
 

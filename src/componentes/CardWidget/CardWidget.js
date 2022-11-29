@@ -1,8 +1,8 @@
 
 
 
-import '../componentes/CardWidget.css'
-import ItemListContainer from './ItemsListContainer';
+import '../CardWidget/CardWidget.css'
+import ItemListContainer from '../ItemsListContainer/ItemsListContainer';
 
 const CardWidget = () =>{
     return( 
