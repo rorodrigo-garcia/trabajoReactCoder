@@ -3,6 +3,10 @@
 .container-cart{
     position: relative;
     cursor: pointer;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .span{
