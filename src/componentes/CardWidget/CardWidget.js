@@ -8,7 +8,7 @@ const CardWidget = () =>{
       <Link to="/cart" >
        
         <span className='span'>0</span>
-      
+
   </Link>
     </div>
     );

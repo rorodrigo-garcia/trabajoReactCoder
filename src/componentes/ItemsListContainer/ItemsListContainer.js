@@ -40,7 +40,6 @@ const ItemListContainer = () => {
   
     return (
       <div className="light">
-        <Contador initial={1} stock={7} />
         <ItemList items={items} />
       </div>
     )
