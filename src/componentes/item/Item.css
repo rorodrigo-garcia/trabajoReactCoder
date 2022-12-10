@@ -1,6 +1,6 @@
 .item-card{
     width: 200px;
-    height: 300px;
+    height: 400px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -13,5 +13,8 @@
 
 
 .item-card > img{
-    width: 100%;
+    width: 100px;
+}
+.item-card h2{
+    font-size: 30px;
 }

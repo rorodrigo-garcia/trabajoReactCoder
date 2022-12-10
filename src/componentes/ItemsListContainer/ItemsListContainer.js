@@ -7,9 +7,9 @@ import { productos } from "../../productosMock";
 
 import ItemList from "../ItemList/ItemList";
 
-import Contador from "../ItemCount/ItemCount";
 
 import { useParams } from "react-router-dom";
+
 
 
 const ItemListContainer = () => {

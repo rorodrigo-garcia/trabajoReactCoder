@@ -1,6 +1,6 @@
 import '../Nav/StyleNav.css'
 import CardWidget from '../CardWidget/CardWidget.js';
-import Comic from "../../imgs/th.jpeg"
+import Comic from "../../Branch/th.jpeg"
 import { Link } from 'react-router-dom';
 
 

@@ -3,6 +3,7 @@ import Navbar from "./componentes/Nav/Nav.js";
 import ItemDetailsContainer from "./componentes/ItemDetailsContainer/ItemDetailsContainer.js";
 import ItemListContainer from "./componentes/ItemsListContainer/ItemsListContainer.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { productos } from "./productosMock.js";
 
 
 
@@ -21,7 +22,7 @@ function App()
 
     <Route path="/categoria" element={<ItemListContainer />}/>
 
-    <Route path="/itemDetail/:id" element={ <ItemDetailsContainer /> } />
+    <Route path="/itemDetail/:id" element={ <ItemDetailsContainer />  } />
 
     <Route path="/cart" element={ <h2>Este es mi carrito </h2> } />
 
