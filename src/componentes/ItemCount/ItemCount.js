@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Contador =({stock,initial})=>{
+const Contador =({stock=5,initial=1,onAdd})=>{
     const[contador,setContador] = useState(initial)
 
     const incrementar =()=>{
@@ -15,9 +15,7 @@ const Contador =({stock,initial})=>{
         }
     }
 
-    const onAdd=(quantity)=>{
-        console.log("La cantidad total es" , quantity)
-    }
+   
 
     return(
         <div>
