@@ -4,8 +4,17 @@ import Contador from "../ItemCount/ItemCount";
 import '../ItemDetails/ItemDetail.css'
 const ItemDetail=({producto}) =>{
 
+    const{ agregarAlCarrito }  = useContext( CartContext)
+
     const onAdd=(quantity)=>{
-        console.log("La cantidad total es" , quantity)
+        agregarAlCarrito(
+            {
+                ...producto,
+                quantity: quantity
+            }
+        )
+
+
     }
 
     return(
@@ -15,7 +24,7 @@ const ItemDetail=({producto}) =>{
             <h2>{producto.valor}</h2>
             <h2>{producto.descripcion}</h2>
         </div>
-        <Contador initial={1} stock={7} onAdd={onAdd}/>
+        <Contador onAdd={onAdd}/>
         </div>
 
     )

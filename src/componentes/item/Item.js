@@ -10,7 +10,7 @@ return(
         <h2>{e.personaje}</h2>
         <img src={e.img} alt="" />
         <h3>${e.valor}</h3>
-        <Link to={`/itemDetail${e.id}`} >Ver mas</Link>
+        <Link to={`/itemDetail/${e.id}`} >Ver mas</Link>
        
 
     </div>

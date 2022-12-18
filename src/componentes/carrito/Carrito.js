@@ -1,16 +1,31 @@
 import { useContext } from "react"
 import { CartContext } from "../../contexto/CartContext"
 
+
 const Carrito =()=>{
 
-    const{cart,agregarAlCarrito} =useContext(CartContext)
+    const{cart , borradoCart} =useContext( CartContext )
     console.log(cart)
 
 
 
     return(
         <div>
-            <h1>estoy en el carrito</h1>
+          {
+           cart.map( item =>{
+            <div key={item.id}>
+                    <h3>{item.personaje}</h3>
+                    <p>{item.descripcion} </p>
+            </div>
+           })
+          }
+
+          <div>
+
+          <button onClick={()=>borradoCart}> Presiona si quieres borrar </button>
+          </div>
+
+
         </div>
     )
 }
