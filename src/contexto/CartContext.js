@@ -16,7 +16,7 @@ const CartContextProvider=({children})=>{
                     }
                     return nuevoProducto
                 }
-              
+              return producto
             } )
 
             setCart(nuevoArray)
@@ -40,7 +40,7 @@ const CartContextProvider=({children})=>{
     }
 
     const totalidad=(id)=>{
-        const producto = cart.find(e=> e.id === id)
+        const producto = cart.find((e)=> e.id === id)
         return producto?.quantity
     }
 

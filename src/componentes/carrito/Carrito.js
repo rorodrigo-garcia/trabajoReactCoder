@@ -13,7 +13,8 @@ const Carrito =()=>{
         <div>
           {
            cart.map( item =>{
-            <div key={item.id}>
+           return <div key={item.id}>
+                    <img src={item.img}></img>
                     <h3>{item.personaje}</h3>
                     <p>{item.descripcion} </p>
             </div>
