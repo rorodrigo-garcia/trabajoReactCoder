@@ -19,10 +19,11 @@ const Carrito =()=>{
             </div>
            })
           }
+          
 
           <div>
 
-          <button onClick={()=>borradoCart}> Presiona si quieres borrar </button>
+          <button onClick={borradoCart}> Presiona si quieres borrar </button>
           </div>
 
 

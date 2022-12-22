@@ -39,10 +39,16 @@ const CartContextProvider=({children})=>{
 
     }
 
+    const totalidad=(id)=>{
+        const producto = cart.find(e=> e.id === id)
+        return producto?.quantity
+    }
+
     const data={
-        cart:cart,
+        cart,
         agregarAlCarrito,
-        borradoCart
+        borradoCart,
+        totalidad
     }
 
 

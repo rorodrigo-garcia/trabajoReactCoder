@@ -1,17 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const Contador =({stock=5,initial=1,onAdd})=>{
+const Contador =({stock,initial=1,onAdd})=>{
     const[contador,setContador] = useState(initial)
+    useEffect(()=>{
+        setContador(initial)
+    },[initial])
 
     const incrementar =()=>{
         if(contador <stock){
-            setContador(contador+1)
+            setContador(contador + 1)
         }
     }
 
     const decrementar =()=>{
         if(contador > initial){
-            setContador(contador-1)
+            setContador(contador - 1 )
         }
     }
 
