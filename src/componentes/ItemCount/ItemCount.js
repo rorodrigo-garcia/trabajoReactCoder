@@ -2,12 +2,10 @@ import { useEffect, useState } from "react";
 
 const Contador =({stock,initial=1,onAdd})=>{
     const[contador,setContador] = useState(initial)
-    useEffect(()=>{
-        setContador(initial)
-    },[initial])
+    
 
     const incrementar =()=>{
-        if(contador <stock){
+        if(contador < stock){
             setContador(contador + 1)
         }
     }

@@ -19,6 +19,7 @@ const ItemDetail=({producto}) =>{
 
     const quantity = totalidad(producto.id)
     console.log(quantity)
+    console.log(producto.stock)
 
     return(
         <div>
