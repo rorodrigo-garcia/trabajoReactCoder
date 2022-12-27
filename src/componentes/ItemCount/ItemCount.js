@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 const Contador =({stock,initial=1,onAdd})=>{
     const[contador,setContador] = useState(initial)
     
+    useEffect(()=>{
+        setContador(initial)
+    },[initial])
 
     const incrementar =()=>{
         if(contador < stock){
@@ -11,7 +14,7 @@ const Contador =({stock,initial=1,onAdd})=>{
     }
 
     const decrementar =()=>{
-        if(contador > initial){
+        if(contador > 1){
             setContador(contador - 1 )
         }
     }

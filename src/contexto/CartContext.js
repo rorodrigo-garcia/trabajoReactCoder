@@ -12,7 +12,8 @@ const CartContextProvider=({children})=>{
             let nuevoArray= cart.map( producto =>{
                 if(producto.id === e.id){
                     let nuevoProducto={
-                        ...producto, quantity: producto.quantity + e.quantity
+                        ...producto,
+                         quantity: producto.quantity
                     }
                     return nuevoProducto
                 }
@@ -40,15 +41,33 @@ const CartContextProvider=({children})=>{
     }
 
     const totalidad=(id)=>{
-        const producto = cart.find((e)=> e.id === id)
+        const producto = cart.find( e => e.id === id)
         return producto?.quantity
+    }
+
+    const precioTotal = ()=>{
+
+        const total = cart.reduce( (acc, e)=>{
+            return acc + (e.valor * e.quantity)
+        },0 )
+        
+        return total
+
+    }
+
+    const borrarObjeto= (id)=>{
+   const borrado = cart.filter( producto => producto.id !== id )
+   setCart(borrado)
     }
 
     const data={
         cart,
         agregarAlCarrito,
         borradoCart,
-        totalidad
+        totalidad,
+        precioTotal,
+        borrarObjeto
+
     }
 
 
