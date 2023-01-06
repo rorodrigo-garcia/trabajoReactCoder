@@ -29,7 +29,7 @@ const ItemDetail=({producto}) =>{
             <h2>{producto.valor}</h2>
             <h2>{producto.descripcion}</h2>
         </div>
-        <Contador onAdd={onAdd} stock={producto.stock} initial={quantity}/>
+        <Contador onAdd={onAdd} stock={!quantity?producto.stock:producto.stock-quantity} initial={producto.stock===quantity?0:1}/>
         </div>
 
     )

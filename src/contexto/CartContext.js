@@ -13,7 +13,7 @@ const CartContextProvider=({children})=>{
                 if(producto.id === e.id){
                     let nuevoProducto={
                         ...producto,
-                         quantity: producto.quantity
+                         quantity: producto.quantity  + e.quantity
                     }
                     return nuevoProducto
                 }
