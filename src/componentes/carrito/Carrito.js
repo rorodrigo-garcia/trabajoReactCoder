@@ -1,15 +1,50 @@
-import { useContext } from "react"
+import { useContext, useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 import { CartContext } from "../../contexto/CartContext"
-
-
+import Form from "../Form/Form"
+import { doc,collection,getDoc } from "firebase/firestore"
+import { db } from "../../firebaseConfiguracion"
+import Ordenes from "../Ordenes/Ordenes"
 const Carrito =()=>{
 
     const{cart , borradoCart , precioTotal,borrarObjeto} =useContext( CartContext )
-    console.log(cart)
-
     
 
+    const [comprar , setComprar] = useState(false)    
+    const [orderId , setOrderId] = useState(null)
+    const [order, setOrder] = useState({})
+    
+    const abrirFormulario = ()=>{
+      if( cart.length > 0 ){
+        setComprar(true)
+      }else{
+        alert ("No hay objetos")
+      }
+       
+    }
+    useEffect (()=>{
+      
+      if(orderId){ 
 
+      const orderCollection = collection(db,"orders")
+      const y = doc(orderCollection, orderId)
+          getDoc(y)
+          .then(res => {
+              setOrder(
+                  {
+                      id:res.id,
+                      ...res.data()
+                  }
+              )
+          })}
+      },[orderId])
+
+  if(orderId){
+    return <div>
+      <h3> Tu orden de compra es : {orderId}</h3>
+      <Link to= "/"> Volver a la compra</Link>
+    </div>
+  }
 
     return(
         <div>
@@ -26,16 +61,23 @@ const Carrito =()=>{
            })
           }
           
+          {
+            comprar ?(  <Form cart={cart} precioTotal={precioTotal} setOrderId={setOrderId} borradoCart={borradoCart} /> ) :  
+            cart.length > 0 &&
+            (<div> <button onClick={abrirFormulario}> Comprar </button>
+            <button> Salir Compra </button>
+            <div>
+        
+        <button onClick={borradoCart}> Presiona para borrar todo </button>
+        </div>
 
-          <div>
-
-          <button onClick={borradoCart}> Presiona si quieres borrar </button>
-          </div>
-
-          <div>
-            <h4> precio total {precioTotal()}</h4>
-          </div>
-
+        <div>
+          <h4> precio total {precioTotal()}</h4>
+     
+        </div>
+        </div>  )
+          }
+          < Ordenes order={order} />
         </div>
 
         

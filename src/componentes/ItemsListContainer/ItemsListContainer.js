@@ -28,24 +28,7 @@ const ItemListContainer = () => {
 
       setCargando(true)
 
-      // const productosFiltered = productos.filter(
-      //   (productos) => productos.categoria === categoriaNombre
-      // )
-  
-      // const task = new Promise((resolve, reject) => {
-      //   setTimeout(() => {
-      //     resolve(categoriaNombre ? productosFiltered : productos)
-      //   }, 500)
-      // })
-  
-      // task
-      //   .then((res) => {
-      //     setItems(res)
-      //   })
-      //   .catch((err) => {
-      //     console.log("se rechazo")
-      //   })
-
+     
       const itemCollection = collection(db, "Productos")
 
       if(categoriaNombre){
@@ -62,7 +45,7 @@ const ItemListContainer = () => {
           setItems(productos)
   
         })
-        .catch( (err) => console.log(err))
+        .catch( (err) => (err))
       }else{
       getDocs(itemCollection)
         .then( (res) => {
@@ -75,7 +58,7 @@ const ItemListContainer = () => {
           setItems(productos)
   
         })
-        .catch( (err) => console.log(err))
+        .catch( (err) => (err))
   
       }
 

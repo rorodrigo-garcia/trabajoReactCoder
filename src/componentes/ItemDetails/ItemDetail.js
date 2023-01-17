@@ -19,7 +19,7 @@ const ItemDetail=({producto}) =>{
     }
 
     const quantity = totalidad(producto.id)
-    console.log(quantity)
+    
    
 
     return(
