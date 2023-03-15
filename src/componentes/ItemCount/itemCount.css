@@ -1,0 +1,31 @@
+
+.sumar{
+   padding: 2px;  
+   border: 3px solid green;   
+   font-size: 18px;
+   margin: 0 1px;
+   border-radius: 5px;
+}
+.sumar:hover{
+    background-color: rgba(0, 128, 0, 0.514);
+}
+.restar{
+    padding: 2px;  
+    border: 3px solid green;   
+    font-size: 18px;
+    margin: 0 1px;
+    border-radius: 5px;
+}
+.restar:hover{
+    background-color: rgba(255, 0, 0, 0.466);
+}
+.agregar{
+    padding: 2px;  
+    border: 3px solid green;   
+    font-size: 18px;
+    margin: 0 1px;
+    border-radius: 5px;
+}
+.agregar:hover{
+    background-color: rgba(128, 128, 128, 0.747);
+}

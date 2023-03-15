@@ -1,0 +1,17 @@
+
+.nombre_producto{
+    color: black;
+    font-size: 45px;
+}
+.valor_producto{
+    color: black;
+    font-size: 40px;
+}
+.descripcion_producto{
+    border: 3px solid black;
+    color: white;
+    background-color: green;
+}
+.img_producto{
+    width: 300px;
+}

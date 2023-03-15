@@ -51,10 +51,10 @@ const Carrito =()=>{
           {
            cart.map( item =>{
            return <div key={item.id}>
-                    <img src={item.img} alt={item.personaje}></img>
-                    <h3>{item.personaje}</h3>
-                    <p>{item.descripcion} </p>
-                    <h5>{item.quantity}</h5>
+                    <img src={item.img} alt={item.personaje} className="img_producto"></img>
+                    <h3 className="nombre_producto">{item.personaje}</h3>
+                    <p className="descripcion_producto">{item.descripcion} </p>
+                    <h5 >{item.quantity}</h5>
                     <button variant="container" onClick={()=>borrarObjeto(item.id)}>Sacar del Carrito</button>
             </div>
             
